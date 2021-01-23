@@ -1222,6 +1222,7 @@ public class FilterProjects extends javax.swing.JFrame {
         Statement stmt=null;
         ResultSet rs=null;
         String sql=null;
+        String abc=null;
         
           sql="Select projectNumber,projectDescription,team,company,phoneNumber,location,startDate,endDate,workingDays,price,gush,parcel,section,paymentStatus,completionStatus From Projects Where projectNumber= '"+projNum+"'";
          
