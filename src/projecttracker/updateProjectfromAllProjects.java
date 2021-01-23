@@ -30,6 +30,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import net.proteanit.sql.DbUtils;
+import static projecttracker.login.userRole;
 /**
  *
  * @author tahab
@@ -789,10 +790,22 @@ public class updateProjectfromAllProjects extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         try {
             // TODO add your handling code here:
-            menu obj=new menu();
-            obj.setVisible(true);
-            conn.close();
-            this.dispose();
+            if(userRole.equals("manager"))
+            {
+                managerMenu obj=new managerMenu();
+                obj.setVisible(true);
+                conn.close();
+                this.dispose();
+            }
+            else
+            {
+                menu obj=new menu();
+                obj.setVisible(true);
+                conn.close();
+                this.dispose();
+            }
+            
+            
         } catch (SQLException ex) {
             Logger.getLogger(updateProjectfromAllProjects.class.getName()).log(Level.SEVERE, null, ex);
         }

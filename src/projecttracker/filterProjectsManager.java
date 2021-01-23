@@ -1046,7 +1046,7 @@ public class filterProjectsManager extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          try {
              // TODO add your handling code here:
-             menu obj=new menu();
+             managerMenu obj=new managerMenu();
              obj.setVisible(true);
              conn.close();
              this.dispose();
@@ -1183,7 +1183,7 @@ public class filterProjectsManager extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
              // TODO add your handling code here:
-             ProjectForm obj=new ProjectForm();
+             ProjectFormManager obj=new ProjectFormManager();
              obj.setVisible(true);
              conn.close();
              this.dispose();
@@ -1205,7 +1205,7 @@ public class filterProjectsManager extends javax.swing.JFrame {
         ResultSet rs=null;
         String sql=null;
         
-          sql="Select projectNumber,projectDescription,team,company,phoneNumber,location,startDate,endDate,workingDays,gush,parcel,section,paymentStatus,completionStatus From Projects Where projectNumber= '"+projNum+"'";
+          sql="Select projectNumber,projectDescription,team,company,phoneNumber,location,startDate,endDate,workingDays,price,gush,parcel,section,paymentStatus,completionStatus From Projects Where projectNumber= '"+projNum+"'";
          
             try {
                 stmt=conn.createStatement();
@@ -1236,7 +1236,7 @@ public class filterProjectsManager extends javax.swing.JFrame {
                   uP.setLocation(rs.getString("location"));
                   uP.setStartDate(rs.getDate("startDate"));
                   uP.setEndDate(rs.getDate("endDate"));
-                  //uP.setPrice(rs.getString("price"));
+                  uP.setPrice(rs.getString("price"));
                   uP.setGush(rs.getString("gush"));
                   uP.setParcel(rs.getString("parcel"));
                   uP.setSection(rs.getString("section"));

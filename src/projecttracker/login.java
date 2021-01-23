@@ -23,6 +23,7 @@ public class login extends javax.swing.JFrame {
      * Creates new form login
      */
     Connection conn=null;
+    static String userRole="";
     public login() {
         initComponents();
         conn=SqLiteConnection.connect();
@@ -246,12 +247,14 @@ public class login extends javax.swing.JFrame {
                    
                    if(role.equals("admin"))
                    {
+                       userRole="admin";
                         menu obj=new menu();
                         obj.setVisible(true);
                         this.dispose();
                    }
                    else if(role.equals("manager"))
                    {
+                       userRole="manager";
                         managerMenu obj=new managerMenu();
                         obj.setVisible(true);
                         this.dispose();

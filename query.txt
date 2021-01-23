@@ -1,0 +1,23 @@
+ String sql="Select sum(price) From Projects Where paymentStatus='"+status+"' ";//Where paymentStatus='"+status+"'
+ 
+ 
+ String sql="Select sum(price) From Projects Where strftime('%Y-%m', startDate / 1000, 'unixepoch')= '"+d+"'";//Where paymentStatus='"+status+"'
+            
+           
+           String sql="Select sum(price) From Projects Where completionStatus='"+status+"' ";//Where paymentStatus='"+status+"'
+            
+            
+            Desktop d=null;
+            File file=new File(System.getenv("Projects"));
+            d=Desktop.getDesktop();
+            try {
+                d.open(file);
+            } catch (IOException ex) {
+                Logger.getLogger(FilterProjects.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            
+            1- Gush and Parcel added both in form and schema of database has been updated.
+            2- Size of items updated
+            3- Button names and labels changed where you said
+            4- Total amount feature has been has been added in the form

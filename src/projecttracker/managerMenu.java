@@ -169,7 +169,7 @@ public class managerMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         try {
-            ProjectForm obj = new ProjectForm();
+            ProjectFormManager obj = new ProjectFormManager();
             obj.setVisible(true);
             this.dispose();
             
@@ -203,7 +203,7 @@ public class managerMenu extends javax.swing.JFrame {
     private void updProjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updProjectActionPerformed
         try {
             // TODO add your handling code here:
-            updateProject obj= new updateProject();
+            updateProjectManager obj= new updateProjectManager();
             obj.setVisible(true);
             this.dispose();
 
